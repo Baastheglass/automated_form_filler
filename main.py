@@ -198,4 +198,16 @@ if __name__ == "__main__":
 
     #next button
     driver.find_element(By.CSS_SELECTOR, "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.ThHDze > div.DE3NNc.CekdCb > div.lRwqcd > div:nth-child(2)").click()
+    
+    #section 2 
+
+    #gestational age
+    types = ['preterm', 'term', 'post term']
+    if random.choice(types) == 'preterm':
+        driver.find_element(By.CSS_SELECTOR, "#i6 > div.vd3tt > div").click()
+    elif random.choice(types) == 'term':
+        driver.find_element(By.CSS_SELECTOR, "#i9 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i12 > div.vd3tt > div").click()
+    
     time.sleep(5)
