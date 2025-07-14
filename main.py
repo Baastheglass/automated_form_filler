@@ -226,5 +226,12 @@ if __name__ == "__main__":
         driver.find_element(By.CSS_SELECTOR, "#i34 > div.vd3tt > div").click()
     else:
         driver.find_element(By.CSS_SELECTOR, "#i37 > div.vd3tt > div").click()
-            
+    
+    #place of birth
+    if random.choice(binary) == 'yes':
+        driver.find_element(By.CSS_SELECTOR, "#i45 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i48 > div.vd3tt > div").click()
+
+
     time.sleep(5)
