@@ -210,4 +210,13 @@ if __name__ == "__main__":
     else:
         driver.find_element(By.CSS_SELECTOR, "#i12 > div.vd3tt > div").click()
     
+    #birth order
+    num = random.randint(1, 3)
+    if num == 1:
+        driver.find_element(By.CSS_SELECTOR, "#i20 > div.vd3tt > div").click()
+    elif num == 2:
+        driver.find_element(By.CSS_SELECTOR, "#i23 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i26 > div.vd3tt > div").click()
+        
     time.sleep(5)
