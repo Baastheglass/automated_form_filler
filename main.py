@@ -83,4 +83,14 @@ if __name__ == "__main__":
     else:
         driver.find_element(By.CSS_SELECTOR, "#i83 > div.vd3tt > div").click()
 
+    #type of house
+    types = ['kutcha', 'pucca', 'semi-pucca']
+    if(random.choice(types) == 'kutcha'):
+        driver.find_element(By.CSS_SELECTOR, "#i91 > div.vd3tt > div").click()
+    elif(random.choice(types) == 'pucca'):
+        driver.find_element(By.CSS_SELECTOR, "#i94 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i97 > div.vd3tt > div").click()
+
+    #type of family
     time.sleep(5)
