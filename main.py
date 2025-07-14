@@ -176,5 +176,10 @@ if __name__ == "__main__":
     else:
         driver.find_element(By.CSS_SELECTOR, "#i225 > div.vd3tt > div").click()
     
+    #are there pets or cattle present
+    if random.choice(binary) == 'yes':
+        driver.find_element(By.CSS_SELECTOR, "#i233 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i236 > div.vd3tt > div").click()
 
     time.sleep(5)
