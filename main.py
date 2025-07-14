@@ -140,5 +140,13 @@ if __name__ == "__main__":
         driver.find_element(By.CSS_SELECTOR, "#i164 > div.vd3tt > div").click()
     else:
         driver.find_element(By.CSS_SELECTOR, "#i167 > div.vd3tt > div").click()
+    
+    #place of cooking
+    places = ['inside room', 'separate room']
+    if random.choice(places) == 'inside room':
+        driver.find_element(By.CSS_SELECTOR, "#i175 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i178 > div.vd3tt > div").click()
 
+    #type of fuel used
     time.sleep(5)
