@@ -93,4 +93,11 @@ if __name__ == "__main__":
         driver.find_element(By.CSS_SELECTOR, "#i97 > div.vd3tt > div").click()
 
     #type of family
+    element = driver.find_element(By.CSS_SELECTOR, "#i100 > span")
+    driver.execute_script("arguments[0].scrollIntoView();", element)
+    types = ['joint', 'nuclear']
+    if(random.choice(types) == 'nuclear'):
+        driver.find_element(By.CSS_SELECTOR, "#i105 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i108 > div.vd3tt > div").click()
     time.sleep(5)
