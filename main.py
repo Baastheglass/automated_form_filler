@@ -102,6 +102,15 @@ if __name__ == "__main__":
         driver.find_element(By.CSS_SELECTOR, "#i108 > div.vd3tt > div").click()
     
     #number of family members
-    num = random.randint(1, 8)
+    num = random.randint(3, 10)
     driver.find_element(By.CSS_SELECTOR, "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(9) > div > div > div.AgroKb > div > div.aCsJod.oJeWuf > div > div.Xb9hP > input").send_keys(str(num))    
+    
+    #socioeconomic status
+    types = ['upper', 'middle', 'lower']
+    if(random.choice(types) == 'upper'):
+        driver.find_element(By.CSS_SELECTOR, "#i121 > div.vd3tt > div").click()
+    elif(random.choice(types) == 'middle'):
+        driver.find_element(By.CSS_SELECTOR, "#i124 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i127 > div.vd3tt > div").click()
     time.sleep(5)
