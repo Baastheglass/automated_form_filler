@@ -22,7 +22,7 @@ if __name__ == "__main__":
     print("Clicked!")
     driver.find_element(By.CSS_SELECTOR, "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.ThHDze > div.DE3NNc.CekdCb > div.lRwqcd > div").click()
     print("Clicked next!")
-    time.sleep(5)
+    time.sleep(2.5)
     #page 1 surpassed
     num = random.randint(1, 5)
     driver.find_element(By.CSS_SELECTOR, "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(2) > div > div > div.AgroKb > div > div.aCsJod.oJeWuf > div > div.Xb9hP > input").send_keys(str(num))
@@ -155,5 +155,10 @@ if __name__ == "__main__":
     else:
         driver.find_element(By.CSS_SELECTOR, "#i189 > div.vd3tt > div").click()
     
+    #is there a window
     binary = ['yes', 'no']
+    if random.choice(binary) == 'yes':
+        driver.find_element(By.CSS_SELECTOR, "#i200 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i203 > div.vd3tt > div").click()
     time.sleep(5)
