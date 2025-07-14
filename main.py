@@ -1,3 +1,4 @@
+from random import random
 import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -6,6 +7,7 @@ from dotenv import load_dotenv
 import os
 import time
 import pyautogui
+import random
 
 if __name__ == "__main__":
     load_dotenv()
@@ -20,4 +22,65 @@ if __name__ == "__main__":
     print("Clicked!")
     driver.find_element(By.CSS_SELECTOR, "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.ThHDze > div.DE3NNc.CekdCb > div.lRwqcd > div").click()
     print("Clicked next!")
+    time.sleep(5)
+    #page 1 surpassed
+    num = random.randint(1, 5)
+    driver.find_element(By.CSS_SELECTOR, "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(2) > div > div > div.AgroKb > div > div.aCsJod.oJeWuf > div > div.Xb9hP > input").send_keys(str(num))
+    genders = ['male', 'female']
+    if random.choice(genders) == 'male':
+        #about to click male as gender of child
+        driver.find_element(By.CSS_SELECTOR, "#i11 > div.vd3tt > div").click()
+    else:
+        #driver about to click female as gender of child
+        driver.find_element(By.CSS_SELECTOR, "#i14 > div.vd3tt > div").click()
+
+    #mom's education
+    element = driver.find_element(By.CSS_SELECTOR, "#i17 > span.M7eMe")
+    driver.execute_script("arguments[0].scrollIntoView();", element)
+    education = random.randint(1, 8)
+    if(education == 1):
+        driver.find_element(By.CSS_SELECTOR, "#i22 > div.vd3tt > div").click()
+    elif(education == 2):
+        driver.find_element(By.CSS_SELECTOR, "#i25 > div.vd3tt > div").click()
+    elif(education == 3):
+        driver.find_element(By.CSS_SELECTOR, "#i28 > div.vd3tt > div").click()
+    elif(education == 4):
+        driver.find_element(By.CSS_SELECTOR, "#i31 > div.vd3tt > div").click()
+    elif(education == 5):
+        driver.find_element(By.CSS_SELECTOR, "#i34 > div.vd3tt > div").click()
+    elif(education == 6):
+        driver.find_element(By.CSS_SELECTOR, "#i37 > div.vd3tt > div").click()
+    elif(education == 7):
+        driver.find_element(By.CSS_SELECTOR, "#i40 > div.vd3tt > div").click()
+    elif(education == 8):
+        driver.find_element(By.CSS_SELECTOR, "#i43 > div.vd3tt > div").click()
+
+    #dad's education
+    element = driver.find_element(By.CSS_SELECTOR, "#i46 > span.M7eMe")
+    driver.execute_script("arguments[0].scrollIntoView();", element)
+    education = random.randint(1, 8)
+    if(education == 1):
+        driver.find_element(By.CSS_SELECTOR, "#i51 > div.vd3tt > div").click()
+    elif(education == 2):
+        driver.find_element(By.CSS_SELECTOR, "#i54 > div.vd3tt > div").click()
+    elif(education == 3):
+        driver.find_element(By.CSS_SELECTOR, "#i57 > div.vd3tt > div").click()
+    elif(education == 4):
+        driver.find_element(By.CSS_SELECTOR, "#i60 > div.vd3tt > div").click()
+    elif(education == 5):
+        driver.find_element(By.CSS_SELECTOR, "#i63 > div.vd3tt > div").click()
+    elif(education == 6):
+        driver.find_element(By.CSS_SELECTOR, "#i66 > div.vd3tt > div").click()
+    elif(education == 7):
+        driver.find_element(By.CSS_SELECTOR, "#i69 > div.vd3tt > div").click()
+    elif(education == 8):
+        driver.find_element(By.CSS_SELECTOR, "#i72 > div.vd3tt > div").click()
+
+    #residence
+    residences = ['urban', 'rural']
+    if(random.choice(residences) == 'urban'):
+        driver.find_element(By.CSS_SELECTOR, "#i80 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i83 > div.vd3tt > div").click()
+
     time.sleep(5)
