@@ -113,4 +113,17 @@ if __name__ == "__main__":
         driver.find_element(By.CSS_SELECTOR, "#i124 > div.vd3tt > div").click()
     else:
         driver.find_element(By.CSS_SELECTOR, "#i127 > div.vd3tt > div").click()
+    #occupational status of mother
+    jobs = ['unemployed', 'self employed', 'labourer', 'government job', 'private job']
+    if random.choice(jobs) == 'government job':
+        driver.find_element(By.CSS_SELECTOR, "#i135 > div.vd3tt > div").click()
+    elif random.choice(jobs) == 'private job':    
+        driver.find_element(By.CSS_SELECTOR, "#i138 > div.vd3tt > div").click()
+    elif random.choice(jobs) == 'labourer':
+        driver.find_element(By.CSS_SELECTOR, "#i141 > div.vd3tt > div").click()
+    elif random.choice(jobs) == 'self employed':
+        driver.find_element(By.CSS_SELECTOR, "#i144 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i147 > div.vd3tt > div").click()
+    #occupational status of father
     time.sleep(5)
