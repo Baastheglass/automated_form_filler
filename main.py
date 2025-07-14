@@ -201,7 +201,8 @@ if __name__ == "__main__":
     driver.find_element(By.CSS_SELECTOR, "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.ThHDze > div.DE3NNc.CekdCb > div.lRwqcd > div:nth-child(2)").click()
     
     #section 2 
-
+    time.sleep(2.5)
+    
     #gestational age
     types = ['preterm', 'term', 'post term']
     if random.choice(types) == 'preterm':
@@ -243,4 +244,14 @@ if __name__ == "__main__":
     #number of siblings
     siblings = num_family - 3
     driver.find_element(By.CSS_SELECTOR, "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(7) > div > div > div.AgroKb > div > div.aCsJod.oJeWuf > div > div.Xb9hP > input").send_keys(str(siblings))
-    time.sleep(5)
+    
+    #immunization status
+    element = driver.find_element(By.CSS_SELECTOR, "#i67 > span")
+    driver.execute_script("arguments[0].scrollIntoView();", element)
+    if random.choice(binary) == 'yes':
+        driver.find_element(By.CSS_SELECTOR, "#i72 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i75 > div.vd3tt > div").click()
+    #next button
+    driver.find_element(By.CSS_SELECTOR, "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.ThHDze > div.DE3NNc.CekdCb > div.lRwqcd > div:nth-child(2)").click()
+    time.sleep(20)
