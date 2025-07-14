@@ -218,5 +218,13 @@ if __name__ == "__main__":
         driver.find_element(By.CSS_SELECTOR, "#i23 > div.vd3tt > div").click()
     else:
         driver.find_element(By.CSS_SELECTOR, "#i26 > div.vd3tt > div").click()
-        
+
+    #gap between births
+    element = driver.find_element(By.CSS_SELECTOR, "#i29 > span")
+    driver.execute_script("arguments[0].scrollIntoView();", element)
+    if random.choice(binary) == 'yes':
+        driver.find_element(By.CSS_SELECTOR, "#i34 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i37 > div.vd3tt > div").click()
+            
     time.sleep(5)
