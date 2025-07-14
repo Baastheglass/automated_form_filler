@@ -149,4 +149,11 @@ if __name__ == "__main__":
         driver.find_element(By.CSS_SELECTOR, "#i178 > div.vd3tt > div").click()
 
     #type of fuel used
+    fuels = ['lpg', 'firewood']
+    if random.choice(fuels) == 'lpg':
+        driver.find_element(By.CSS_SELECTOR, "#i186 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i189 > div.vd3tt > div").click()
+    
+    binary = ['yes', 'no']
     time.sleep(5)
