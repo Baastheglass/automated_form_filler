@@ -182,4 +182,10 @@ if __name__ == "__main__":
     else:
         driver.find_element(By.CSS_SELECTOR, "#i236 > div.vd3tt > div").click()
 
+    #smoking near child
+    if random.choice(binary) == 'yes':
+        driver.find_element(By.CSS_SELECTOR, "#i244 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i247 > div.vd3tt > div").click()
+    
     time.sleep(5)
