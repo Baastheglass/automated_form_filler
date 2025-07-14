@@ -161,4 +161,14 @@ if __name__ == "__main__":
         driver.find_element(By.CSS_SELECTOR, "#i200 > div.vd3tt > div").click()
     else:
         driver.find_element(By.CSS_SELECTOR, "#i203 > div.vd3tt > div").click()
+    
+    #is your child present at the time of cooking
+    element = driver.find_element(By.CSS_SELECTOR, "#i206 > span")
+    driver.execute_script("arguments[0].scrollIntoView();", element)
+    if random.choice(binary) == 'yes':
+        driver.find_element(By.CSS_SELECTOR, "#i211 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i214 > div.vd3tt > div").click()
+
+    #is there adequate cross ventilation
     time.sleep(5)
