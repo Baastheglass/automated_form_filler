@@ -113,6 +113,7 @@ if __name__ == "__main__":
         driver.find_element(By.CSS_SELECTOR, "#i124 > div.vd3tt > div").click()
     else:
         driver.find_element(By.CSS_SELECTOR, "#i127 > div.vd3tt > div").click()
+    
     #occupational status of mother
     jobs = ['unemployed', 'self employed', 'labourer', 'government job', 'private job']
     if random.choice(jobs) == 'government job':
@@ -125,5 +126,19 @@ if __name__ == "__main__":
         driver.find_element(By.CSS_SELECTOR, "#i144 > div.vd3tt > div").click()
     else:
         driver.find_element(By.CSS_SELECTOR, "#i147 > div.vd3tt > div").click()
+    
     #occupational status of father
+    element = driver.find_element(By.CSS_SELECTOR, "#i150 > span.M7eMe")
+    driver.execute_script("arguments[0].scrollIntoView();", element)
+    if random.choice(jobs) == 'government job':
+        driver.find_element(By.CSS_SELECTOR, "#i155 > div.vd3tt > div").click()
+    elif random.choice(jobs) == 'private job':    
+        driver.find_element(By.CSS_SELECTOR, "#i158 > div.vd3tt > div").click()
+    elif random.choice(jobs) == 'labourer':
+        driver.find_element(By.CSS_SELECTOR, "#i161 > div.vd3tt > div").click()
+    elif random.choice(jobs) == 'self employed':
+        driver.find_element(By.CSS_SELECTOR, "#i164 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i167 > div.vd3tt > div").click()
+
     time.sleep(5)
