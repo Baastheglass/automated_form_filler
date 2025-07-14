@@ -103,6 +103,7 @@ if __name__ == "__main__":
     
     #number of family members
     num = random.randint(3, 10)
+    num_family = num
     driver.find_element(By.CSS_SELECTOR, "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(9) > div > div > div.AgroKb > div > div.aCsJod.oJeWuf > div > div.Xb9hP > input").send_keys(str(num))    
     
     #socioeconomic status
@@ -233,5 +234,13 @@ if __name__ == "__main__":
     else:
         driver.find_element(By.CSS_SELECTOR, "#i48 > div.vd3tt > div").click()
 
+    #weight at birth
+    if random.choice(binary) == 'yes':
+        driver.find_element(By.CSS_SELECTOR, "#i56 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i59 > div.vd3tt > div").click()
 
+    #number of siblings
+    siblings = num_family - 3
+    driver.find_element(By.CSS_SELECTOR, "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(7) > div > div > div.AgroKb > div > div.aCsJod.oJeWuf > div > div.Xb9hP > input").send_keys(str(siblings))
     time.sleep(5)
