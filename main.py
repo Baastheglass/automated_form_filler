@@ -171,4 +171,10 @@ if __name__ == "__main__":
         driver.find_element(By.CSS_SELECTOR, "#i214 > div.vd3tt > div").click()
 
     #is there adequate cross ventilation
+    if random.choice(binary) == 'yes':
+        driver.find_element(By.CSS_SELECTOR, "#i222 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i225 > div.vd3tt > div").click()
+    
+
     time.sleep(5)
