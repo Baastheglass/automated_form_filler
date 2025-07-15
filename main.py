@@ -287,4 +287,11 @@ if __name__ == "__main__":
     else:
         driver.find_element(By.CSS_SELECTOR, "#i45 > div.vd3tt > div").click()
     
+    #exclusive breastfeeding
+    if random.choice(binary) == 'yes':
+        driver.find_element(By.CSS_SELECTOR, "#i53 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i56 > div.vd3tt > div").click()
+    
+    #supplementary feeding
     time.sleep(5)
