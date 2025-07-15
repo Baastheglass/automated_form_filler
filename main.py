@@ -324,4 +324,19 @@ if __name__ == "__main__":
 
     #next button
     driver.find_element(By.CSS_SELECTOR, "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.ThHDze > div.DE3NNc.CekdCb > div.lRwqcd > div:nth-child(2)").click()
+    
+    #section 4
+    time.sleep(2.5)
+    
+    #number of meals
+    num_meals =[1,2,3,4]
+    if random.choice(num_meals) == 1:
+        driver.find_element(By.CSS_SELECTOR, "#i6 > div.vd3tt > div").click()
+    elif random.choice(num_meals) == 2:
+        driver.find_element(By.CSS_SELECTOR, "#i9 > div.vd3tt > div").click()
+    elif random.choice(num_meals) == 3:
+        driver.find_element(By.CSS_SELECTOR, "#i12 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i15 > div.vd3tt > div").click()
+        
     time.sleep(5)
