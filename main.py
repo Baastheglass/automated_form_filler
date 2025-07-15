@@ -299,4 +299,12 @@ if __name__ == "__main__":
     else:
         driver.find_element(By.CSS_SELECTOR, "#i67 > div.vd3tt > div").click()
     
+    #mixed feeding
+    element = driver.find_element(By.CSS_SELECTOR, "#i70 > span")
+    driver.execute_script("arguments[0].scrollIntoView();", element)
+    if random.choice(binary) == 'yes':
+        driver.find_element(By.CSS_SELECTOR, "#i75 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i78 > div.vd3tt > div").click()
+        
     time.sleep(5)
