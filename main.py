@@ -379,5 +379,18 @@ if __name__ == "__main__":
 
     #section 5
     time.sleep(2.5)
+    diseases = ['flu', 'acute otitis', 'pertussis', 'tonsillopharyngitis', 'pneumonia', 'bronchiolitis']
+    if random.choice(diseases) == 'flu':
+        driver.find_element(By.CSS_SELECTOR, "#i7").click()
+    elif random.choice(diseases) == 'acute otitis':
+        driver.find_element(By.CSS_SELECTOR, "#i10").click()
+    elif random.choice(diseases) == 'pertussis':
+        driver.find_element(By.CSS_SELECTOR, "#i13").click()
+    elif random.choice(diseases) == 'tonsillopharyngitis':
+        driver.find_element(By.CSS_SELECTOR, "#i16").click()
+    elif random.choice(diseases) == 'pneumonia':
+        driver.find_element(By.CSS_SELECTOR, "#i19").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i22").click()
     
     time.sleep(5)
