@@ -264,4 +264,14 @@ if __name__ == "__main__":
     else:
         driver.find_element(By.CSS_SELECTOR, "#i9 > div.vd3tt > div").click()
 
+    #breastfeeding time
+    times = ['within 1 hour', '1 to 4 hours', 'after 4 hours']
+    if random.choice(times) == 'within 1 hour':
+        driver.find_element(By.CSS_SELECTOR, "#i17 > div.vd3tt > div").click()
+    elif random.choice(times) == '1 to 4 hours':
+        driver.find_element(By.CSS_SELECTOR, "#i20 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i23 > div.vd3tt > div").click()
+
+    
     time.sleep(5)
