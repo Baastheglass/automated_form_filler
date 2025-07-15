@@ -355,5 +355,24 @@ if __name__ == "__main__":
         driver.find_element(By.CSS_SELECTOR, "#i37 > div.vd3tt > div").click()
     else:
         driver.find_element(By.CSS_SELECTOR, "#i40 > div.vd3tt > div").click()
-        
+    
+    #meat consumption
+    if random.choice(binary) == 'yes':
+        driver.find_element(By.CSS_SELECTOR, "#i48 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i51 > div.vd3tt > div").click()
+
+    #vegetable consumption
+    if random.choice(binary) == 'yes':
+        driver.find_element(By.CSS_SELECTOR, "#i59 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i62 > div.vd3tt > div").click()
+    
+    #fruit consumption
+    if random.choice(binary) == 'yes':
+        driver.find_element(By.CSS_SELECTOR, "#i70 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i73 > div.vd3tt > div").click()
+
+    
     time.sleep(5)
