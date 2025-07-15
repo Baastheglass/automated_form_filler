@@ -313,4 +313,13 @@ if __name__ == "__main__":
     else:
         driver.find_element(By.CSS_SELECTOR, "#i89 > div.vd3tt > div").click()
 
+    #bottle cleaning
+    types = ['after every feed', 'once a day', 'less frequently']
+    if random.choice(types) == 'after every feed':
+        driver.find_element(By.CSS_SELECTOR, "#i97 > div.vd3tt > div").click()
+    elif random.choice(types) == 'once a day':
+        driver.find_element(By.CSS_SELECTOR, "#i100 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i103 > div.vd3tt > div").click()
+    
     time.sleep(5)
