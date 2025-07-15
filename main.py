@@ -379,18 +379,31 @@ if __name__ == "__main__":
 
     #section 5
     time.sleep(2.5)
-    diseases = ['flu', 'acute otitis', 'pertussis', 'tonsillopharyngitis', 'pneumonia', 'bronchiolitis']
-    if random.choice(diseases) == 'flu':
-        driver.find_element(By.CSS_SELECTOR, "#i7").click()
-    elif random.choice(diseases) == 'acute otitis':
+    diseases = ['acute otitis', 'pertussis', 'tonsillopharyngitis', 'pneumonia', 'bronchiolitis']
+    disease_choice = random.choice(diseases)
+    if disease_choice == 'acute otitis':
         driver.find_element(By.CSS_SELECTOR, "#i10").click()
-    elif random.choice(diseases) == 'pertussis':
+    elif disease_choice == 'pertussis':
         driver.find_element(By.CSS_SELECTOR, "#i13").click()
-    elif random.choice(diseases) == 'tonsillopharyngitis':
+    elif disease_choice == 'tonsillopharyngitis':
         driver.find_element(By.CSS_SELECTOR, "#i16").click()
-    elif random.choice(diseases) == 'pneumonia':
+    elif disease_choice == 'pneumonia':
         driver.find_element(By.CSS_SELECTOR, "#i19").click()
-    else:
-        driver.find_element(By.CSS_SELECTOR, "#i22").click()
     
+    #next button
+    driver.find_element(By.CSS_SELECTOR, "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.ThHDze > div.DE3NNc.CekdCb > div.lRwqcd > div:nth-child(2)").click()
+    
+    #section 6
+    time.sleep(2.5)
+    if disease_choice == 'acute otitis':
+        driver.find_element(By.CSS_SELECTOR, "#i10").click()
+    elif disease_choice == 'pertussis':
+        driver.find_element(By.CSS_SELECTOR, "#i13").click()
+    elif disease_choice == 'tonsillopharyngitis':
+        driver.find_element(By.CSS_SELECTOR, "#i16").click()
+    elif disease_choice == 'pneumonia':
+        driver.find_element(By.CSS_SELECTOR, "#i19").click()
+    
+    #submit button
+    driver.find_element(By.CSS_SELECTOR, "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.ThHDze > div.DE3NNc.CekdCb > div.lRwqcd > div.uArJ5e.UQuaGc.Y5sE8d.VkkpIf.QvWxOd").click()
     time.sleep(5)
