@@ -321,5 +321,7 @@ if __name__ == "__main__":
         driver.find_element(By.CSS_SELECTOR, "#i100 > div.vd3tt > div").click()
     else:
         driver.find_element(By.CSS_SELECTOR, "#i103 > div.vd3tt > div").click()
-    
+
+    #next button
+    driver.find_element(By.CSS_SELECTOR, "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.ThHDze > div.DE3NNc.CekdCb > div.lRwqcd > div:nth-child(2)").click()
     time.sleep(5)
