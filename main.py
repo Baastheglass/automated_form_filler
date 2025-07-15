@@ -273,5 +273,18 @@ if __name__ == "__main__":
     else:
         driver.find_element(By.CSS_SELECTOR, "#i23 > div.vd3tt > div").click()
 
+    #colostrum
+    element = driver.find_element(By.CSS_SELECTOR, "#i26 > span.M7eMe")
+    driver.execute_script("arguments[0].scrollIntoView();", element)
+    if random.choice(binary) == 'yes':
+        driver.find_element(By.CSS_SELECTOR, "#i31 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i34 > div.vd3tt > div").click()
+    
+    #food given
+    if random.choice(binary) == 'yes':
+        driver.find_element(By.CSS_SELECTOR, "#i42 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i45 > div.vd3tt > div").click()
     
     time.sleep(5)
