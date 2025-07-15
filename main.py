@@ -338,5 +338,11 @@ if __name__ == "__main__":
         driver.find_element(By.CSS_SELECTOR, "#i12 > div.vd3tt > div").click()
     else:
         driver.find_element(By.CSS_SELECTOR, "#i15 > div.vd3tt > div").click()
-        
+    
+    #meals skipped?
+    if random.choice(binary) == 'yes':
+        driver.find_element(By.CSS_SELECTOR, "#i23 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i26 > div.vd3tt > div").click()
+
     time.sleep(5)
