@@ -345,4 +345,15 @@ if __name__ == "__main__":
     else:
         driver.find_element(By.CSS_SELECTOR, "#i26 > div.vd3tt > div").click()
 
+    #fast food consumed?
+    element = driver.find_element(By.CSS_SELECTOR, "#i29 > span")
+    driver.execute_script("arguments[0].scrollIntoView();", element)
+    types = ['frequently', 'occasionally', 'rarely']
+    if random.choice(types) == 'frequently':
+        driver.find_element(By.CSS_SELECTOR, "#i34 > div.vd3tt > div").click()
+    elif random.choice(types) == 'rarely':
+        driver.find_element(By.CSS_SELECTOR, "#i37 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i40 > div.vd3tt > div").click()
+        
     time.sleep(5)
