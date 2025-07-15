@@ -306,5 +306,11 @@ if __name__ == "__main__":
         driver.find_element(By.CSS_SELECTOR, "#i75 > div.vd3tt > div").click()
     else:
         driver.find_element(By.CSS_SELECTOR, "#i78 > div.vd3tt > div").click()
-        
+    
+    #bottle
+    if random.choice(binary) == 'yes':
+        driver.find_element(By.CSS_SELECTOR, "#i86 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i89 > div.vd3tt > div").click()
+
     time.sleep(5)
