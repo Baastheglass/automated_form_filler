@@ -294,4 +294,9 @@ if __name__ == "__main__":
         driver.find_element(By.CSS_SELECTOR, "#i56 > div.vd3tt > div").click()
     
     #supplementary feeding
+    if random.choice(binary) == 'yes':
+        driver.find_element(By.CSS_SELECTOR, "#i64 > div.vd3tt > div").click()
+    else:
+        driver.find_element(By.CSS_SELECTOR, "#i67 > div.vd3tt > div").click()
+    
     time.sleep(5)
